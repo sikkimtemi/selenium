@@ -20,8 +20,10 @@ dtstr = dt.strftime("%Y%m%d%H%M%S")
 # Googleにアクセス
 browser.get('https://www.google.co.jp/')
 
+sleep(1)
+
 # スクリーンショット
-browser.save_screenshot('images/' + dtstr + '.png');
+browser.save_screenshot('images/' + dtstr + '.png')
 
 # 終了
 browser.close()
