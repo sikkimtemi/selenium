@@ -18,11 +18,12 @@ def execSearch(browser: webdriver):
     browser.get('https://www.google.co.jp/')
     sleep(1)
 
-    # キーワードの入力
-    browser.find_element_by_id('lst-ib').send_keys('docker selenium')
+   # キーワードの入力
+    search_box = browser.find_element_by_name("q")
+    search_box.send_keys('docker selenium')
 
     # 検索実行
-    browser.find_element_by_name('btnK').submit()
+    search_box.submit()
     sleep(1)
 
     # スクリーンショット
